@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/d.mcclain/bin/dotfiles'
+let g:netrw_dirhist_2='/Users/d.mcclain/bin/dotfiles/vim'
+let g:netrw_dirhist_3='/Users/d.mcclain/dev/modcloth/mc-identity-service'
+let g:netrw_dirhist_4='/Users/d.mcclain/dev/modcloth/mc-identity'
+let g:netrw_dirhist_5='/Users/d.mcclain/dev/modcloth/mc-identity-service'
+let g:netrw_dirhist_6='/Users/d.mcclain/dev/modcloth/mc-identity-service/app'
+let g:netrw_dirhist_7='/Users/d.mcclain/dev/modcloth/mc-identity-service/app/controllers'
+let g:netrw_dirhist_8='/Users/d.mcclain/bin/dotfiles'
