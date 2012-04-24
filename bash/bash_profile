@@ -1,0 +1,24 @@
+# Git aliases for bash
+
+# alias gst='git status'
+# alias gl='git pull'
+# alias gp='git push'
+# alias gd='git diff | mate'
+# alias gc='git commit -v'
+# alias gca='git commit -v -a'
+# alias gb='git branch'
+# alias gba='git branch -a'
+# 
+# function parse_git_branch {
+#   ref=$(git-symbolic-ref HEAD 2> /dev/null) || return
+#   echo "("${ref#refs/heads/}")"
+# }
+# 
+# export PS1='\w $(parse_git_branch)$ '
+
+export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
+
+if [[ -s /Users/d.mcclain/.rvm/scripts/rvm ]] ; then source /Users/d.mcclain/.rvm/scripts/rvm ; fi
+	
+# To load alaises like 2cms
+source ~/.bashrc
