@@ -81,7 +81,7 @@ let g:bufExplorerShowRelativePath=1
 
 " Settings for VimClojure
 let vimclojure#HighlightBuiltins=1  " Highlight Clojure's builtins
-let g:clj_paren_rainbow=1           " Rainbow parentheses'!
+let vimclojure#ParenRainbow=1       " Rainbow parentheses'!
 
 " Pathogen
 call pathogen#infect()
