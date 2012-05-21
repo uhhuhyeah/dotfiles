@@ -1,0 +1,7 @@
+function authme {
+	ssh -p$1 $2 'cat >>.ssh/authorized_keys' <~/.ssh/id_rsa.pub
+}
+alias 2cms="ssh -p 28400 deploy@beseamless.com"
+alias 2tags="ssh -p 22800 deploy@67.23.18.94"
+alias 2webby2="ssh -p 4222 deploy@208.88.124.210"
+

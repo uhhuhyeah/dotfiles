@@ -1,46 +1,19 @@
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/mongodb/bin:/Users/d.mcclain/bin:$PATH"
 
-function authme {
-	ssh -p$1 $2 'cat >>.ssh/authorized_keys' <~/.ssh/id_rsa.pub
-}
-alias 2cms="ssh -p 28400 deploy@beseamless.com"
-alias 2tags="ssh -p 22800 deploy@67.23.18.94"
-alias 2webby2="ssh -p 4222 deploy@208.88.124.210"
-
-alias ss="script/server"
-alias sc="script/console"
-alias sg="script/generate"
-alias log="tail -f log/*.log"
-alias r="./script/rails"
-alias ru="rvm use"
-alias be="bundle exec"
-alias ber="bundle exec rake"
-alias brake="bundle exec rake"
-alias rspec="bundle exec rspec"
-
-function om {
-	cd ~/development/$1 && mate .
-}
-function omv {
-  cd ~/development/$1 && mvim .
-}
-
-alias gst='git status'
-alias g='git'
-alias st='status'
-alias co='checkout'
-
 # import git completion script
 source ~/.git-completion.sh
 GIT_PS1_SHOWDIRTYSTATE='true'
 # format command prompt as current_dir (branch)
 PS1='\W $(__git_ps1 "(%s) ")λ '
 
+# Can't remember where this came from of if it's important
+export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 
 if [[ -s /Users/davidamcclain/.rvm/scripts/rvm ]] ; then source /Users/davidamcclain/.rvm/scripts/rvm ; fi
 
 VIM_APP_DIR=/usr/bin/	
 
+# ModCloth settings for managing memory with e-comm
 export RUBY_GC_MALLOC_LIMIT="50000000"
 export RUBY_HEAP_MIN_SLOTS="500000"
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR="1"

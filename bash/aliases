@@ -1,0 +1,19 @@
+alias ss="script/server"
+alias sc="script/console"
+alias log="tail -f log/*.log"
+alias r="./script/rails"
+alias rc="./script/rails console"
+alias rs="./script/rails server"
+alias ru="rvm use"
+alias be="bundle exec"
+alias ber="bundle exec rake"
+alias brake="bundle exec rake"
+alias rspec="bundle exec rspec"
+
+function om {
+	cd ~/development/$1 && mate .
+}
+function omv {
+  cd ~/development/$1 && mvim .
+}
+
