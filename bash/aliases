@@ -16,6 +16,8 @@ alias rspec="bundle exec rspec"
 alias rmig="be rake db:migrate"
 alias rprep="be rake db:test:prepare"
 
+alias winps="cd ~/dev/modcloth/winstotron/ && heroku ps:restart"
+
 function om {
 	cd ~/development/$1 && mate .
 }
