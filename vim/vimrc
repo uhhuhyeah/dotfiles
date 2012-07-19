@@ -67,7 +67,8 @@ vmap <D-]> >gv
 
 " Uncomment to use Jamis Buck's file opening plugin
 map <Leader>t :FuzzyFinderTextMate<Enter>
-map <F12> :ruby finder.rescan! "Refresh FuzzyFinder's index
+"Refresh FuzzyFinder's index
+map <F12> :ruby finder.rescan!<Enter> 
 
 " Controversial...swap colon and semicolon for easier commands
 "nnoremap ; :
