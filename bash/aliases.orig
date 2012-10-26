@@ -1,0 +1,36 @@
+alias ..="cd .."
+alias reload="source ~/bin/dotfiles/bash/aliases"
+alias ea="mvim ~/bin/dotfiles/bash/aliases && reload"
+
+alias ss="script/server"
+alias sc="script/console"
+alias log="tail -f log/*.log"
+alias r="rake"
+alias rc="./script/rails console"
+alias rs="./script/rails server"
+alias ru="rvm use"
+alias be="bundle exec"
+alias brake="bundle exec rake"
+alias rspec="bundle exec rspec"
+alias rmig="be rake db:migrate"
+alias rprep="be rake db:test:prepare"
+alias gst="git status"
+<<<<<<< HEAD
+alias tags="ctags -R --exclude=.git --exclude=log * ~/.rvm/gems/ruby-head/*"
+=======
+>>>>>>> Adding gst alias
+
+alias winps="cd ~/dev/modcloth/winstotron/ && heroku ps:restart"
+
+function om {
+	cd ~/development/$1 && mate .
+}
+function omv {
+  cd ~/development/$1 && mvim .
+}
+
+function take {
+	mkdir $1
+	cd $1
+}
+
