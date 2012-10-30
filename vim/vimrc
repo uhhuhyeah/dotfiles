@@ -72,6 +72,9 @@ map <Leader>t :FuzzyFinderTextMate<Enter>
 "Refresh FuzzyFinder's index
 map <F12> :ruby finder.rescan!<Enter> 
 
+" Ctrl-P (fuzzy finder)
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 " Controversial...swap colon and semicolon for easier commands
 "nnoremap ; :
 "nnoremap : ;
