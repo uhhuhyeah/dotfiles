@@ -87,7 +87,8 @@ call MapCR()
 
 command W w "Write file even if I can't get my fat finger off the shift key
 
-nnoremap <leader>a :Ack "Easier mapping for Ack
+"Easier mapping for Ack
+nnoremap <leader>a :Ack 
 
 nnoremap <leader>vimrc <C-w><C-v><C-l>:e $MYVIMRC<cr> " Open .vimrc in new window
 
