@@ -4,3 +4,4 @@
 
 .netrwhist
 *.old
+/vim/bundle/ctrlp.vim
