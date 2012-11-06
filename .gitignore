@@ -5,3 +5,4 @@
 .netrwhist
 *.old
 /vim/bundle/ctrlp.vim
+/vim/bundle/vim-fugitive/
