@@ -19,6 +19,8 @@ alias tags="ctags -R --exclude=.git --exclude=log * ~/.rvm/gems/ruby-head/*"
 
 alias winps="cd ~/dev/modcloth/winstotron/ && heroku ps:restart"
 
+alias rspec="be rspec --format Fuubar"
+
 function om {
 	cd ~/development/$1 && mate .
 }
