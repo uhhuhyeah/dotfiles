@@ -21,6 +21,8 @@ alias winps="cd ~/dev/modcloth/winstotron/ && heroku ps:restart"
 
 alias rspec="be rspec --format Fuubar"
 
+alias "rmorig"=find . -iname '*.orig' | xargs rm
+
 function om {
 	cd ~/development/$1 && mate .
 }
