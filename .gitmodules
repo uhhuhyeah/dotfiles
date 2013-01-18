@@ -4,3 +4,12 @@
 [submodule "vim/bundle/vim-rails"]
 	path = vim/bundle/vim-rails
 	url = https://github.com/tpope/vim-rails.git
+[submodule "vim/bundle/golden-ratio"]
+	path = vim/bundle/golden-ratio
+  url = https://github.com/roman/golden-ratio.git
+[submodule "vim/bundle/vim-colors-solarized"]
+	path = vim/bundle/vim-colors-solarized
+  url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "vim/bundle/vim-vroom"]
+	path = vim/bundle/vim-vroom
+  url = https://github.com/skalnik/vim-vroom.git
