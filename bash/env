@@ -1,4 +1,4 @@
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/mongodb/bin:~/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/mongodb/bin:~/bin:/usr/local/share/npm/bin:$PATH"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 if [[ -s /Users/davidamcclain/.rvm/scripts/rvm ]] ; then source /Users/davidamcclain/.rvm/scripts/rvm ; fi
