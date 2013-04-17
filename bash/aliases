@@ -12,36 +12,9 @@ alias winps="cd ~/dev/modcloth/winstotron/ && heroku ps:restart"
 alias rspec="be rspec --format Fuubar"
 alias rmorig="find . -iname '*.orig' | xargs rm"
 alias rmog="rmorig"
-
-function om {
-	cd ~/development/$1 && mate .
-}
-function omv {
-  cd ~/development/$1 && mvim .
-}
-
-function take {
-	mkdir $1
-	cd $1
-}
-
-function clone {
-  git clone git://github.com/$1.git
-}
-
-function g {
-  if [[ $# > 0 ]]; then
-    git $@
-  else
-    git status
-  fi
-}
+alias th="top_history"
 
 # Quick way to rebuild the Launch Services database and get rid
 # of duplicates in the Open With submenu.
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
 
-function top_history {
-  history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head
-}
-alias top_hist="top_history"
