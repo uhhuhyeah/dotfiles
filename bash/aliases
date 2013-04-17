@@ -1,5 +1,5 @@
 alias ..="cd .."
-alias reload="source ~/bin/dotfiles/bash/aliases"
+alias reload="source ~/.bashrc"
 alias ea="mvim ~/bin/dotfiles/bash/aliases && reload"
 
 alias log="tail -f log/*.log"
