@@ -14,4 +14,4 @@ export RUBY_HEAP_SLOTS_INCREMENT="250000"
 TERM="xterm"
 export TERM
 
-export EDITOR="mvim -w"
+export EDITOR="mvim -v"
