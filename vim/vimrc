@@ -116,3 +116,4 @@ let vimclojure#ParenRainbow=1       " Rainbow parentheses'!
 
 " Pathogen
 call pathogen#infect()
+source /Library/Python/2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
