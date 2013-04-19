@@ -13,6 +13,7 @@ alias rspec="be rspec --format Fuubar"
 alias rmorig="find . -iname '*.orig' | xargs rm"
 alias rmog="rmorig"
 alias th="top_history"
+alias k="clear"
 
 # Quick way to rebuild the Launch Services database and get rid
 # of duplicates in the Open With submenu.
