@@ -5,6 +5,7 @@ let mapleader=","
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
+
 runtime macros/matchit.vim        " Load the matchit plugin.
 
 set noswapfile                    " Disable vim creating .swp files
@@ -77,6 +78,10 @@ map <F12> :ruby finder.rescan!<Enter>
 " Ctrl-P (fuzzy finder)
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
+" Support for Command-Save
+map <C-s> <esc>:w<CR>
+imap <C-s> <esc>:w<CR>
+
 " Controversial...swap colon and semicolon for easier commands
 "nnoremap ; :
 "nnoremap : ;
@@ -116,4 +121,11 @@ let vimclojure#ParenRainbow=1       " Rainbow parentheses'!
 
 " Pathogen
 call pathogen#infect()
+
+colorscheme solarized
+set guifont=Inconsolata\ for\ Powerline:h14       " Font family and font size.
+let g:solarized_termtrans = 1
+set background=dark               " Background.
+call togglebg#map("<F5>")         " Map <F5> to toggle light/dark background
+
 source /Library/Python/2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
