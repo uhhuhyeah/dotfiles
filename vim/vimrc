@@ -82,6 +82,9 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 map <C-s> <esc>:w<CR>
 imap <C-s> <esc>:w<CR>
 
+"Toggle relative or absolute numbering
+nnoremap <F3> :NumbersToggle<CR>
+
 " Controversial...swap colon and semicolon for easier commands
 "nnoremap ; :
 "nnoremap : ;
