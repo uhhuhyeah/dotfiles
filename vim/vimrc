@@ -84,6 +84,8 @@ imap <C-s> <esc>:w<CR>
 
 "Toggle relative or absolute numbering
 nnoremap <F3> :NumbersToggle<CR>
+"Set default as absolute
+let g:enable_numbers = 0
 
 " Controversial...swap colon and semicolon for easier commands
 "nnoremap ; :
