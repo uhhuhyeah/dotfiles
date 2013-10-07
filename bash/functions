@@ -53,3 +53,7 @@ function big_tail {
 
   wait
 }
+
+function delete_branch {
+  git push origin :$1; git branch -D $1
+}
