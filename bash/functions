@@ -1,9 +1,9 @@
 function om {
-	cd ~/development/$1 && mate .
+	cd ~/code/modcloth/$1 && mate .
 }
 
 function omv {
-  cd ~/development/$1 && mvim .
+  cd ~/code/modcloth/$1 && mvim .
 }
 
 function take {
