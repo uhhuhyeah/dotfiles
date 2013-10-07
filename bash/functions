@@ -35,3 +35,21 @@ function git-nuke {
 function track { 
   git branch --track $1 "origin/$1"
 }
+
+# Log into all SG production boxes and tail their logs
+function big_tail {
+  HOSTS=(community-app-01.prod.modcloth.com community-app-02.prod.modcloth.com community-app-03.prod.modcloth.com community-app-04.prod.modcloth.com community-app-05.prod.modcloth.com community-app-06.prod.modcloth.com)
+
+  echo "Hit CTRL-C to stop"
+  sleep 0.5
+  PIDS=""
+  for host in ${HOSTS[*]}
+  do
+      ssh -i ~/.ssh/workstation_rsa -t -t deploy@$host "tail -f /var/log/nginx/localhost.access.log" &
+     PIDS="$PIDS $!"
+  done
+
+  trap 'kill $PIDS' SIGINT
+
+  wait
+}
