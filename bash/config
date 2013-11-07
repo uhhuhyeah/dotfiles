@@ -1,4 +1,5 @@
 # Prompt
+source ~/.git-prompt.sh
 source ~/.git-completion.sh
 GIT_PS1_SHOWDIRTYSTATE='true'
 # format command prompt as current_dir (branch)
