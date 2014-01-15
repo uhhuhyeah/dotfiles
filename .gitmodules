@@ -13,9 +13,6 @@
 [submodule "vim/bundle/vim-vroom"]
 	path = vim/bundle/vim-vroom
   url = https://github.com/skalnik/vim-vroom.git
-[submodule "vim/bundle/ag"]
-	path = vim/bundle/ag
-	url = https://github.com/vim-scripts/ag.vim.git
 [submodule "vim/bundle/tabular"]
   path = vim/bundle/tabular
   url = https://github.com/godlygeek/tabular.git
