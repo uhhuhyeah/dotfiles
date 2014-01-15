@@ -33,8 +33,8 @@ Install Powerline:
 
 References:
 
-    https://github.com/Lokaltog/powerline
-    https://powerline.readthedocs.org/en/latest/
+  https://github.com/Lokaltog/powerline
+  https://powerline.readthedocs.org/en/latest/
 
 
 Help:
