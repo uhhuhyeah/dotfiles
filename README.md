@@ -15,27 +15,28 @@ Switch to the `~/.vim` directory, and fetch submodules:
     git submodule update
 
 
-Install MacVIM with sidebar
+Install MacVIM with sidebar:
 
     https://github.com/joelcogen/homebrew-macvimsplitbrowser
 
 
-Install Ag (faster than ack)
+Install Ag (faster than ack):
 
     brew install ag
 
 
-Install Powerline
+Install Powerline:
 
     pip install --user git+git://github.com/Lokaltog/powerline
     brew install macvim --env-std --override-system-vim
     Install powerline version of Inconsolata https://github.com/Lokaltog/powerline-fonts
 
-    References:
-      https://github.com/Lokaltog/powerline
-      https://powerline.readthedocs.org/en/latest/
+References:
+
+    https://github.com/Lokaltog/powerline
+    https://powerline.readthedocs.org/en/latest/
 
 
-Help
+Help:
 
   http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
