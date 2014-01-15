@@ -125,6 +125,7 @@ let vimclojure#HighlightBuiltins=1  " Highlight Clojure's builtins
 let vimclojure#ParenRainbow=1       " Rainbow parentheses'!
 
 " Pathogen
+runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
 colorscheme solarized
