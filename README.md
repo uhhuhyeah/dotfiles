@@ -29,9 +29,8 @@ Install Powerline:
 
     pip install --user git+git://github.com/Lokaltog/powerline
     brew install macvim --env-std --override-system-vim
-    Install powerline version of Inconsolata https://github.com/Lokaltog/powerline-fonts
 
-References:
+  Install powerline version of Inconsolata https://github.com/Lokaltog/powerline-fonts
 
   https://github.com/Lokaltog/powerline
   https://powerline.readthedocs.org/en/latest/
