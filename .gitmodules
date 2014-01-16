@@ -31,3 +31,6 @@
 [submodule "vim/bundle/vim-ag"]
 	path = vim/bundle/vim-ag
 	url = https://github.com/rking/ag.vim
+[submodule "vim/bundle/ctrlp.vim"]
+	path = vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
