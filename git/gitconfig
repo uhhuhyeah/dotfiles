@@ -32,3 +32,4 @@
 	keepBackup = true
 [core]
 	excludesfile = /Users/d.mcclain/.gitignore
+	quotepath = false
