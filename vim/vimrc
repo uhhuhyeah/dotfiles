@@ -87,6 +87,9 @@ nnoremap <F3> :NumbersToggle<CR>
 "Set default as absolute
 let g:enable_numbers = 0
 
+"Toggle showing invisibles
+nmap <leader>i :set list!<CR>
+
 " Controversial...swap colon and semicolon for easier commands
 "nnoremap ; :
 "nnoremap : ;
