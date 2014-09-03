@@ -8,4 +8,4 @@ VIM_APP_DIR=/usr/bin/
 TERM="xterm"
 export TERM
 
-export EDITOR="mvim -v"
+export EDITOR="vim"
