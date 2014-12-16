@@ -23,3 +23,4 @@ alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/
 alias vim="mvim -v"
 alias vimr="open -a VimR"
 alias s="bundle exec rails server"
+alias fs="foreman start web"
