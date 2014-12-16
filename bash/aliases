@@ -21,4 +21,5 @@ alias resetdb="bundle exec rake db:drop db:create db:migrate db:test:prepare"
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
 
 alias vim="mvim -v"
+alias vimr="open -a VimR"
 alias s="bundle exec rails server"
