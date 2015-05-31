@@ -140,11 +140,11 @@ nmap <leader>i :set list!<CR>
 " BufferExplorer
 let g:bufExplorerShowRelativePath=1
 
+set background=light               " Background.
 colorscheme solarized
 set guifont=Inconsolata\ for\ Powerline:h14       " Font family and font size.
 set encoding=utf-8
 let g:solarized_termtrans = 1
-set background=light               " Background.
 call togglebg#map("<F2>")         " Map <F2> to toggle light/dark background
 
 python from powerline.vim import setup as powerline_setup
