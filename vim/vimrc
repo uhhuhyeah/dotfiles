@@ -1,4 +1,26 @@
 set nocompatible                  " Must come first because it changes other options.
+
+" Vundle
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'jlanzarotta/bufexplorer'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-scripts/snipMate'
+Plugin 'vim-scripts/ag.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
+Plugin 'skalnik/vim-vroom'
+Plugin 'myusuf3/numbers.vim'
+
+call vundle#end()
+" End of Vundle
+
 set t_Co=256
 
 let mapleader=","
@@ -71,11 +93,6 @@ nmap <D-]> >>
 vmap <D-[> <gv
 vmap <D-]> >gv
 
-" Uncomment to use Jamis Buck's file opening plugin
-map <Leader>t :FuzzyFinderTextMate<Enter>
-"Refresh FuzzyFinder's index
-map <F12> :ruby finder.rescan!<Enter> 
-
 " Ctrl-P (fuzzy finder)
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
@@ -123,19 +140,11 @@ nmap <leader>i :set list!<CR>
 " BufferExplorer
 let g:bufExplorerShowRelativePath=1
 
-" Settings for VimClojure
-let vimclojure#HighlightBuiltins=1  " Highlight Clojure's builtins
-let vimclojure#ParenRainbow=1       " Rainbow parentheses'!
-
-" Pathogen
-runtime bundle/pathogen/autoload/pathogen.vim
-call pathogen#infect()
-
 colorscheme solarized
 set guifont=Inconsolata\ for\ Powerline:h14       " Font family and font size.
 set encoding=utf-8
 let g:solarized_termtrans = 1
-set background=dark               " Background.
+set background=light               " Background.
 call togglebg#map("<F2>")         " Map <F2> to toggle light/dark background
 
 python from powerline.vim import setup as powerline_setup
