@@ -1,0 +1,183 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/dmcclain/.oh-my-zsh"
+
+source ~/.zshenv
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+  git 
+  zsh-syntax-highlighting 
+  zsh-autosuggestions
+  dotenv
+)
+
+source $ZSH/oh-my-zsh.sh
+
+ZSH_AUTOSUGGEST_HISTORY_IGNORE="(git cherry-pick *|curl *)"
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+
+alias fakeemail="java --add-exports java.desktop/com.apple.eawt=ALL-UNNAMED -jar ~/code/fakeSMTP-2.0.jar -o ~/code/fakeSMTP/ -p 8082 -s"
+alias ssh-devshop="ssh -i '~/.ssh/davidm.pem' ec2-44-203-162-212.compute-1.amazonaws.com"
+alias ssh-prod="ssh -i '~/.ssh/davidm.pem' ec2-user@ec2-3-87-221-95.compute-1.amazonaws.com"
+alias dev-old-ssm="aws ssm start-session --region us-east-1 --target i-0895dab8eebde4b73 --document-name AWS-StartPortForwardingSessionToRemoteHost --parameters host='bulletin-develop.csuxiix5pijm.us-east-1.rds.amazonaws.com',portNumber='5432',localPortNumber='7878'"
+alias dev-ssm="aws ssm start-session --region us-east-1 --target i-0895dab8eebde4b73 --document-name AWS-StartPortForwardingSessionToRemoteHost --parameters host='bulletin-develop-serverless-cluster.cluster-csuxiix5pijm.us-east-1.rds.amazonaws.com',portNumber='5432',localPortNumber='7878'"
+alias dev-gatekeeper-ssm="aws ssm start-session --region us-east-1 --target i-0895dab8eebde4b73 --document-name AWS-StartPortForwardingSessionToRemoteHost --parameters host='bulletingatekeeperdevelop-databaseb269d8bb-bib2syp4ih6u.csuxiix5pijm.us-east-1.rds.amazonaws.com',portNumber='5432',localPortNumber='7878'"
+alias dev-worker-ssm="aws ssm start-session --region us-east-1 --target i-0895dab8eebde4b73 --document-name AWS-StartPortForwardingSessionToRemoteHost --parameters host='bulletinworkerdevelop-workerdatabase753c60e5-t3kyzxigbope.cluster-csuxiix5pijm.us-east-1.rds.amazonaws.com',portNumber='5432',localPortNumber='7878'"
+alias prod-ssm="aws ssm start-session --region us-east-1 --target i-0381ebb0b400f5011 --document-name AWS-StartPortForwardingSessionToRemoteHost --parameters host='bulletin-production-cluster.cluster-ro-csuxiix5pijm.us-east-1.rds.amazonaws.com',portNumber='5432',localPortNumber='8119'"
+alias prod-proxy-ssm="aws ssm start-session --region us-east-1 --target i-0381ebb0b400f5011 --document-name AWS-StartPortForwardingSessionToRemoteHost --parameters host='bulletin-proxy-production-read-only.endpoint.proxy-csuxiix5pijm.us-east-1.rds.amazonaws.com',portNumber='5432',localPortNumber='8119'"
+alias prod17-ssm="aws ssm start-session --region us-east-1 --target i-0381ebb0b400f5011 --document-name AWS-StartPortForwardingSessionToRemoteHost --parameters host='bulletin-production-17.csuxiix5pijm.us-east-1.rds.amazonaws.com',portNumber='5432',localPortNumber='8119'"
+alias prod-writer-ssm="aws ssm start-session --region us-east-1 --target i-0381ebb0b400f5011 --document-name AWS-StartPortForwardingSessionToRemoteHost --parameters host='bulletin-production-cluster.cluster-csuxiix5pijm.us-east-1.rds.amazonaws.com',portNumber='5432',localPortNumber='8119'"
+alias postgres-log-tail="tail -f  /usr/local/var/log/postgresql@14.log"
+alias brew86="arch -x86_64 /usr/local/homebrew/bin/brew"
+
+# Alias to start an SSM session with port forwarding to RDS
+# Alias to start an SSM session with port forwarding to RDS
+alias docker-prod-ssm="docker run -it --rm \
+  -v ~/.aws:/root/.aws \
+  awscli-local \
+  aws ssm start-session \
+    --region us-east-1 \
+    --target i-0381ebb0b400f5011 \
+    --document-name AWS-StartPortForwardingSessionToRemoteHost \
+    --parameters '{\"host\":[\"bulletin-production-cluster.cluster-ro-csuxiix5pijm.us-east-1.rds.amazonaws.com\"],\"portNumber\":[\"5432\"],\"localPortNumber\":[\"8119\"]}'"
+
+# Alias to start an SSM session with port forwarding to RDS
+alias docker-aws='docker run --rm -it -v ~/.aws:/root/.aws -v $PWD:/aws awscli-local'
+
+
+
+# Set Spaceship ZSH as a prompt
+# autoload -U promptinit; promptinit
+# prompt spaceship
+
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# . /usr/local/opt/asdf/libexec/asdf.sh
+
+##  Bypassing jenv for Emerald laptop
+# export PATH="$HOME/.jenv/bin:$PATH"
+# eval "$(jenv init -)"
+
+## Bypassing homebrew for Emerald laptop
+# Homebrew on Apple Silicon
+# path=('/opt/homebrew/bin' $path)
+# export PATH
+
+alias ib='PATH=/usr/local/bin'
+# Usage
+# ~ ▶ which youtube-dl
+# /opt/homebrew/bin/youtube-dl
+# ~ ▶ ib which youtube-dl
+# /usr/local/bin/youtube-dl
+# If you have the same command installed in both Homebrews, it'll default to Apple Silicon (/opt/homebrew/) since we prepended that one in our PATH. To override, run the command with its full path (/usr/local/bin/youtube-dl), or override your PATH for one command (PATH=/usr/local/bin youtube-dl).
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export PATH="/Users/dmcclain/Library/Python/3.13/bin:$PATH"
+
+## Bypassing for Emerald laptop
+# . /opt/homebrew/opt/asdf/libexec/asdf.sh
+# export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
+# Added by Windsurf
+export PATH="/Users/dmcclain/.codeium/windsurf/bin:$PATH"
